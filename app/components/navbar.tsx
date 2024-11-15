@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // Disable scrolling when the mobile menu is open
   useEffect(() => {
     if (mobileMenuOpen) {
       document.body.classList.add("overflow-hidden");
