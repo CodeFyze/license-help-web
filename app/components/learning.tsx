@@ -23,7 +23,7 @@ export default function HowItWorks() {
   ];
 
   return (
-    <div className="bg-yellow-500 flex flex-col md:flex-row items-center justify-center min-h-screen px-6 md:px-20 py-10"
+    <div className="bg-yellow-500 flex flex-col md:flex-row items-center justify-center  px-6 md:px-20 py-10"
     style={{ boxShadow: '0 -10px 15px -3px rgba(0, 0, 0, 0.3), 0 10px 15px -3px rgba(0, 0, 0, 0.3)' }}
     >
       <div className="text-center md:text-left max-w-lg md:mr-10">

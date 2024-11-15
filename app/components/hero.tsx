@@ -7,17 +7,17 @@ const HeroSection: React.FC = () => {
   const [selectedOption, setSelectedOption] = useState("Auto");
 
   return (
-    <section className="relative flex bg-[#F1F1F1]  flex-col items-center text-center h-[800px] ">
-      <div className="max-w-2xl px-4 pt-10 md:pt-20 lg:pt-24">
+    <section className="relative flex w-full bg-[#F1F1F1] overflow-x-hidden rounded-bl-[100px] rounded-br-[100px] md:rounded-bl-[50px] md:rounded-br-[50px] md:h-[500px] flex-col items-center text-center h-[500px] ">
+      <div className="max-w-3xl  px-4 pt-10 md:pt-20 lg:pt-24">
         <div className="flex items-center  justify-center md:space-x-2">
-          <h1 className="text-md px-44 ml-10 md:ml-0 md:text-5xl font-extrabold text-gray-800 leading-tight">
+          <h1 className="text-md px-44 md:ml-0 md:text-3xl lg:text-5xl font-extrabold text-gray-800 leading-tight">
             <div className="whitespace-nowrap">
               Choose from <span className="text-yellow-500">1000+</span> Driving Instructors
             </div>
             <div className="whitespace-nowrap">
               start your{" "}
               <span className="inline-flex items-center text-yellow-500">
-                <img src="sign-arrow.png" className="mx-1 w-4 h-4 md:w-5 md:h-5 object-contain" alt="Arrow Icon" />{" "}
+                <img src="sign-arrow.png" className="mx-1 w-4 h-4 md:w-12 md:h-12 object-contain" alt="Arrow Icon" />{" "}
                 journey
               </span>{" "}
               with <span className="text-yellow-500">us today</span>
@@ -31,7 +31,7 @@ const HeroSection: React.FC = () => {
         <div className="mt-6 flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
           <img
             src="sign-route.png"
-            className="ml-3 absolute -left-3 top-72 md:top-56 md:left-28 w-20 h-20 md:w-36 md:h-36"
+            className="ml-3 absolute -left-3 top-72 md:top-52 lg:top-56 lg:left-28 w-20 h-20 md:w-28 md:h-28 lg:w-36 lg:h-36"
             alt="Route Icon"
           />
           <button
@@ -46,7 +46,7 @@ const HeroSection: React.FC = () => {
             <span>Auto</span>
             <img
               src="sign-attention.png"
-              className="absolute left-56 ml-2 w-16 h-16 md:w-[350px] md:h-[130px] md:left-[800px] md:-top-48"
+              className="absolute left-56 ml-2 w-16 h-16 md:left-[700px] lg:left-[800px] lg:w-[130px] lg:h-[130px] md:w-[100px] md:h-[100px] md:-top-48"
               alt="Attention Icon"
             />
           </button>
@@ -73,9 +73,9 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="w-full h-full mt-8 flex justify-center relative">
+      <div className="w-full h-[100px] md:h-full mt-8 flex justify-center relative">
         <div
-          className="absolute inset-0 w-full h-1/2 mx-auto rounded-bl-[150px] rounded-br-[150px] overflow-hidden md:rounded-bl-[50px] md:rounded-br-[50px]
+          className="absolute inset-0 w-full h-full mx-auto rounded-bl-[150px] rounded-br-[150px] overflow-hidden md:rounded-bl-[50px] md:rounded-br-[50px]
           "
           style={{
             backgroundImage: "url('/background.png')",
@@ -86,7 +86,7 @@ const HeroSection: React.FC = () => {
           }}
         ></div>
         <div
-          className="absolute inset-0 w-full h-1/2 mx-auto bg-[#F1F1F1] rounded-bl-[150px] rounded-br-[150px] md:rounded-bl-[50px] md:rounded-br-[50px]"
+          className="absolute inset-0 w-full h-full mx-auto bg-[#F1F1F1] rounded-bl-[150px] rounded-br-[150px] md:rounded-bl-[50px] md:rounded-br-[50px]"
           style={{ opacity: 0.5 }}
         ></div>
       </div>

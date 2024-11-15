@@ -1,5 +1,5 @@
 import React from "react";
-
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 const Footer: React.FC = () => {
   const sections = [
     {
@@ -64,8 +64,8 @@ const Footer: React.FC = () => {
   const bottomLinks = ["Privacy Policy", "Terms and Conditions"];
 
   const socialLinks = [
-    { icon: "fab fa-facebook", link: "#" },
-    { icon: "fab fa-instagram", link: "#" },
+    { icon: <FaFacebook />, link: "#" },
+    { icon: <FaInstagram />, link: "#" },
   ];
 
   return (
@@ -89,7 +89,6 @@ const Footer: React.FC = () => {
             </p>
           </div>
 
-          {/* Links Section using map */}
           {sections.map((section, index) => (
             <div key={index}>
               <h4 className="text-yellow-400 font-semibold">{section.title}</h4>
@@ -129,13 +128,14 @@ const Footer: React.FC = () => {
               </a>
             ))}
           </div>
-          <div className="flex space-x-4 mt-4 md:mt-0">
-            {socialLinks.map((social, index) => (
-              <a key={index} href={social.link} className="text-white hover:text-yellow-400">
-                <i className={social.icon}></i>
-              </a>
-            ))}
-          </div>
+          <div className="flex items-start space-x-4 mt-4  pr-10 md:mt-0">
+  {socialLinks.map((social, index) => (
+    <a key={index} href={social.link} className="text-white hover:text-yellow-400 text-2xl">
+      {social.icon}
+    </a>
+  ))}
+</div>
+
         </div>
    </div>
   );

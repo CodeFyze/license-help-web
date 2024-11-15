@@ -1,8 +1,22 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Disable scrolling when the mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    // Cleanup on component unmount
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [mobileMenuOpen]);
 
   return (
     <nav className="bg-[#F1F1F1] py-4 px-6 flex items-center justify-between relative z-10">
@@ -10,18 +24,18 @@ const Navbar: React.FC = () => {
         <div className="text-yellow-600 font-bold text-lg">Logo</div>
         <span className="text-gray-700 border-l pl-2">Instruct with Yourname</span>
       </div>
-      <div className="hidden md:flex space-x-6 text-gray-700">
+      <div className="hidden lg:flex space-x-6 text-gray-700">
         <a href="#" className="hover:text-yellow-600">Driving Lessons</a>
         <a href="#" className="hover:text-yellow-600">Test Packages</a>
         <a href="#" className="hover:text-yellow-600">Gift Vouchers</a>
         <a href="#" className="hover:text-yellow-600">Pricing</a>
         <a href="#" className="hover:text-yellow-600">Support</a>
       </div>
-      <div className="hidden md:flex space-x-4 items-center">
+      <div className="hidden lg:flex space-x-4 items-center">
         <button className="border border-gray-400 text-gray-700 px-4 py-2 rounded">Learner Login</button>
         <button className="bg-yellow-500 text-white px-4 py-2 rounded">Instructor Login</button>
       </div>
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <button
           className="text-gray-700"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -43,7 +57,7 @@ const Navbar: React.FC = () => {
         </button>
       </div>
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-16 left-0 w-full h-screen bg-[#F1F1F1] flex flex-col items-center space-y-4 py-4 text-gray-700 z-20">
+        <div className="lg:hidden absolute top-16 left-0 w-full h-screen bg-[#F1F1F1] flex flex-col items-center space-y-4 py-4 text-gray-700 z-20">
           <a href="#" className="hover:text-yellow-600">Driving Lessons</a>
           <a href="#" className="hover:text-yellow-600">Test Packages</a>
           <a href="#" className="hover:text-yellow-600">Gift Vouchers</a>

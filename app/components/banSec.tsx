@@ -5,7 +5,7 @@ import { IoIosArrowForward } from 'react-icons/io';
 export default function DrivingTestPackage() {
   return (
     <section
-      className="relative min-h-screen text-white py-12 bg-cover bg-center"
+      className="relative  text-white py-12 bg-cover bg-center"
       style={{ backgroundImage: "url('/Group529.png')" }}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-10">
